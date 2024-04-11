@@ -1,0 +1,55 @@
+==========================================
+SLURM_JOB_ID = 11156408
+SLURM_SUBMIT_DIR = /home/tjacobs0/developers/code
+SLURM_JOB_NODELIST = mcn60
+==========================================
+Job ID: 11156408
+Job User: tjacobs0
+Num Cores: 1
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+✔ tibble  3.1.8     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.2
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::between()   masks data.table::between()
+✖ dplyr::filter()    masks stats::filter()
+✖ dplyr::first()     masks data.table::first()
+✖ dplyr::lag()       masks stats::lag()
+✖ dplyr::last()      masks data.table::last()
+✖ purrr::transpose() masks data.table::transpose()
+Linking to GEOS 3.7.2, GDAL 3.0.4, PROJ 6.3.2; sf_use_s2() is TRUE
+Reading layer `Zoning_nov2012' from data source 
+  `/home/tjacobs0/developers/raw/Zoning 2012/Zoning_nov2012.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 11294 features and 8 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 1091188 ymin: 1813892 xmax: 1205199 ymax: 1951666
+Projected CRS: NAD83 / Illinois East (ftUS)
+[1] "Loaded File"
+Reading layer `Zoning_asof_14NOV2023' from data source 
+  `/home/tjacobs0/developers/raw/zoning_nov23/Zoning_asof_14NOV2023.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 14456 features and 21 fields (with 4 geometries empty)
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 1091138 ymin: 1813892 xmax: 1205199 ymax: 1951666
+Projected CRS: NAD83 / Illinois East (ftUS)
+Reading layer `tracts_2010' from data source 
+  `/home/tjacobs0/developers/raw/tracts_2010/tracts_2010.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 801 features and 9 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: -87.94025 ymin: 41.64429 xmax: -87.52366 ymax: 42.02392
+Geodetic CRS:  WGS84(DD)
+Warning message:
+attribute variables are assumed to be spatially constant throughout all geometries 
+Warning message:
+attribute variables are assumed to be spatially constant throughout all geometries 
+Error in file.path(eerived, "intersection_2012.RDS") : 
+  object 'eerived' not found
+Calls: saveRDS -> file.path
+Execution halted
+srun: error: mcn60: task 0: Exited with exit code 1

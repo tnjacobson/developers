@@ -1,0 +1,35 @@
+==========================================
+SLURM_JOB_ID = 11156381
+SLURM_SUBMIT_DIR = /home/tjacobs0/developers/code
+SLURM_JOB_NODELIST = mcn59
+==========================================
+Job ID: 11156381
+Job User: tjacobs0
+Num Cores: 1
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+✔ tibble  3.1.8     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.2
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::between()   masks data.table::between()
+✖ dplyr::filter()    masks stats::filter()
+✖ dplyr::first()     masks data.table::first()
+✖ dplyr::lag()       masks stats::lag()
+✖ dplyr::last()      masks data.table::last()
+✖ purrr::transpose() masks data.table::transpose()
+Linking to GEOS 3.7.2, GDAL 3.0.4, PROJ 6.3.2; sf_use_s2() is TRUE
+Reading layer `Zoning_nov2012' from data source 
+  `/home/tjacobs0/developers/raw/Zoning 2012/Zoning_nov2012.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 11294 features and 8 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 1091188 ymin: 1813892 xmax: 1205199 ymax: 1951666
+Projected CRS: NAD83 / Illinois East (ftUS)
+[1] "Loaded File"
+Error in wk_handle.wk_wkb(wkb, s2_geography_writer(oriented = oriented,  : 
+  Loop 0 edge 1377 has duplicate near loop 2 edge 0
+Calls: %>% ... s2_geog_from_wkb -> <Anonymous> -> wk_handle.wk_wkb
+Execution halted
+srun: error: mcn59: task 0: Exited with exit code 1

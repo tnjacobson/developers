@@ -1,0 +1,5 @@
+==========================================
+SLURM_JOB_ID = 11226004
+SLURM_SUBMIT_DIR = /home/tjacobs0/developers/code
+SLURM_JOB_NODELIST = mcn54
+==========================================

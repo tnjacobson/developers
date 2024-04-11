@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#SBATCH --account=phd
+#SBATCH --mem=32G
+#SBATCH --time=0-12:00:00
+#SBATCH --job-name=merge_lobby
+
+
+# Load the necessary software modules
+module load stata/17.0
+
+# create a new scratch directory for this job
+scratch_dir="/scratch/${SLURM_JOB_USER}/${SLURM_JOB_ID}"
+mkdir -p $scratch_dir
+
+# use scratch dir to store tmp files
+export STATATMP=$scratch_dir
+
+# run script
+dofile='cluster_firms.do'
+srun stata-mp -b do $dofile
+
+# remove scratch directory when done
+rm -r $scratch_dir
